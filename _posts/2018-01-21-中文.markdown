@@ -4,31 +4,115 @@ title:  "欢迎来到Jekyll!"
 date:   2018-01-01 11:23:25 +0800
 categories: jekyll update
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+# Table of Contents
 
-中文笔记支持。
+1.  [org mode for spacemacs](#org4a422f0)
+2.  [link operation](#orgd81495a):link:
+3.  [items operation](#org9296a93)
+    1.  [test todo items](#org6a6c714)
+    2.  [items <code>[0%]</code>](#org405085c)
+        1.  [itemsA](#org77b2534)
+        2.  [itemsB <code>[1/2]</code>](#org1ca5940)
+4.  [tags operation](#orgc2c78fc):new:tags:
+5.  [timestamps](#org00b844a)
 
-{% highlight python %}
-#include<iostream>
-int main(){
-  std::cout << "Hello world" << std::endl;
-}
-{% endhighlight %}
 
-Jekyll also offers powerful support for code snippets:
+<a id="org4a422f0"></a>
 
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
+# org mode for spacemacs
 
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
 
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+<a id="orgd81495a"></a>
+
+# link operation     :link:
+
+1.  link format
+    [[link] [description]] or alternatively [ [link] ]  *no space*
+    key: `leader-i-l`
+2.  internal link <a id="orga74dc7a"></a>
+    anchor point <a id="org275ae87"></a> [ [org]] or [ [org][description]]
+    heading [[link operation] ]
+3.  custom id type
+    [ [#custom-id]]
+4.  handling link
+    1.  insert link `c-c c-l` `leader-key-i-l`
+        edit link when the cursor is on the link.
+    2.  open link 
+        `C-c C-o` or `mouse-1` or `enter`
+    3.  store link
+        1.  `C-c l`  or `spc-a-o-l`
+        2.  global `C-u C-c C-l` insert:: [hogan's code file](code/)
+        3.  insert some code line [code line](cam.cpp)
+
+
+<a id="org9296a93"></a>
+
+# items operation
+
+
+<a id="org6a6c714"></a>
+
+## TODO test todo items
+
+-   **rotate:** unmarked->todo->closed->unmarked
+    `C-c C-t` or `t`
+-   view todo items in sparse tree mode `C-c / t` or `leader-T`
+-   Insert a new TODO entry below the current one `S-M-RET`
+-   priority `C-c ,` increase/decrease priority of current headline `S-up/down`
+-   new list item `M-RET` new todo/checkbox item `S-M-RET`
+-   toggle checkbox `C-c C-c` or `,,~`
+-   list mark changed `,-`
+
+
+<a id="org405085c"></a>
+
+## TODO items <code>[0%]</code>
+
+
+<a id="org77b2534"></a>
+
+### itemsA
+
+
+<a id="org1ca5940"></a>
+
+### itemsB <code>[1/2]</code>
+
+-   [ ] item a
+-   [X] item b
+
+
+<a id="orgc2c78fc"></a>
+
+# tags operation     :new:tags:
+
+tags located at the end of **headline** and  must be preceded and followed by a single colon;
+
+1.  insert tags at any position `C-c C-q` or `C-c C-c` when cursor located at headline `,,`
+2.  need more things to understand it
+
+
+<a id="org00b844a"></a>
+
+# TODO timestamps
+
+1.  insert timestamps `,.` or `C-c .`
+2.  Spacemacs binds C-u to scroll-up and change the universal argument binding to SPC u.
+3.  deadline `C-c C-d` or `,-d` ,
+4.  scheduled `C-c C-s` or `,-s`
+5.  clocking work time
+    1.  start the clock `,-I`
+    2.  end the clock  `,-O`
+    3.  cancel the clock `,-q`
+    4.  code block:: `~, ~<s-tab>` `<e-tab>`
+
+    git pull 
+
+    #include <stdio.h>
+    int main(){
+      printf("hello world");
+    }
+
+    print(2)
+
