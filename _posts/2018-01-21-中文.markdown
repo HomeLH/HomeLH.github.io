@@ -92,6 +92,7 @@ tags located at the end of **headline** and  must be preceded and followed by a 
 1.  insert tags at any position `C-c C-q` or `C-c C-c` when cursor located at headline `,,`
 2.  need more things to understand it
 
+![screen]({{site.url}}/assets/Screenshot_2017-08-10_19-44-42.png  "screen")
 
 <a id="org00b844a"></a>
 
